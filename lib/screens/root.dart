@@ -13,7 +13,7 @@ class Root extends StatelessWidget {
         // Create bottom navigation bar items from screens.
         final bottomNavigationBarItems = provider.screens
             .map((screen) => BottomNavigationBarItem(
-                icon: Icon(Icons.home), title: Text(screen.title)))
+                icon: Icon(Icons.home), label: screen.title))
             .toList();
 
         // Initialize [Navigator] instance for each screen.

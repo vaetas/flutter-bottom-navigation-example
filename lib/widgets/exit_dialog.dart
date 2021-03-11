@@ -6,7 +6,7 @@ class ExitAlertDialog extends StatelessWidget {
     return AlertDialog(
       title: Text('Exit?'),
       actions: <Widget>[
-        FlatButton(
+        TextButton(
           onPressed: () {
             Navigator.of(context).pop(false);
           },
@@ -17,7 +17,7 @@ class ExitAlertDialog extends StatelessWidget {
                 ),
           ),
         ),
-        FlatButton(
+        TextButton(
           onPressed: () {
             Navigator.of(context).pop(true);
           },
