@@ -95,7 +95,8 @@ class NavigationProvider extends ChangeNotifier {
   /// If currently displayed screen has given [ScrollController] animate it
   /// to the start of scroll view.
   void _scrollToStart() {
-    if (currentScreen.scrollController != null) {
+    if (currentScreen.scrollController != null &&
+        currentScreen.scrollController.hasClients) {
       currentScreen.scrollController.animateTo(
         0,
         duration: const Duration(seconds: 1),
